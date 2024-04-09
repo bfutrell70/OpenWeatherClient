@@ -17,8 +17,8 @@ public class Client : IClient
 
     public async Task<OneCallResponse> OneCallAsync(decimal latitude, decimal longitude, IEnumerable<Excludes> excludes, Units unit)
     {
-        const string ONECALL_URL_TEMPLATE = "/onecall";
-        var uriBuilder = new UriBuilder(BASE_URL + ONECALL_URL_TEMPLATE);
+        const string WEATHER_URL_TEMPLATE = "/weather";
+        var uriBuilder = new UriBuilder(BASE_URL + WEATHER_URL_TEMPLATE);
         var query = HttpUtility.ParseQueryString("");
         query["lat"] = latitude.ToString();
         query["lon"] = longitude.ToString();
